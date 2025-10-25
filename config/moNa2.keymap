@@ -13,7 +13,22 @@
 };
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        combo_left_click {
+            timeout-ms = <50>;
+            key-positions = <17 18>; // J + K
+            bindings = <&mkp MB1>;   // 左クリック
+        };
+
+        combo_right_click {
+            timeout-ms = <50>;
+            key-positions = <18 19>; // K + L
+            bindings = <&mkp MB2>;   // 右クリック
+        };
+    };
+};
 
     macros {
         to_layer_0: to_layer_0 {
